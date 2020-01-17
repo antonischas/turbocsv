@@ -1,0 +1,20 @@
+{
+    "name": "antonischas/turbo_csv",
+    "description": "Array to CSV and general CSV functionality",
+    "type": "library",
+    "license": "GNU GPL v3.0",
+    "authors": [
+        {
+            "name": "antonischas",
+            "email": "xasourasantonis@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "TurboCsv": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.0.0"
+    }
+}
