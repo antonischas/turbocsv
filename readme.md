@@ -5,7 +5,7 @@ Description
 ----
 An easy to use array to CSV library.
 
-Example:
+Example array to CSV:
 ```sh
 $data = [
             'names' => ['Antonis', 'Giannis', 'Teo'],
@@ -26,10 +26,21 @@ $csv_content = $csv->create($data, $options);
 
 ```
 
+Example CSV file to array:
+```sh
+        
+$csv = new Csv();
+
+$csv_array = $csv->fileToArray('test.csv', ['delimiter' => ';']
+
+```
+
 Versions
 ----
  - 1.0
      - Simple array to CSV conversion.
+ - 1.1
+     - Add CSV file to array conversion.
 
 License
 ----
