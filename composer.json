@@ -4,7 +4,7 @@
     "type": "library",
     "keywords": ["csv-converter"],
     "homepage": "https://github.com/antonischas/turbocsv",
-    "license": ["GNU GPL v3.0", "MIT"],
+    "license": ["GPL-2.0-or-later", "MIT"],
     "authors": [
         {
             "name": "antonischas",
