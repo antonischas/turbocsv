@@ -34,7 +34,7 @@ Versions
 License
 ----
 
-MIT v3
+GNU GPL v3.0
 
 
 **You are welcome 👍**

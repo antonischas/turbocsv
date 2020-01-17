@@ -2,6 +2,8 @@
     "name": "antonischas/turbo_csv",
     "description": "Array to CSV and general CSV functionality",
     "type": "library",
+    "keywords": ["csv-converter"],
+    "homepage": "https://github.com/antonischas/turbocsv",
     "license": "GNU GPL v3.0",
     "authors": [
         {
