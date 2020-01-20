@@ -37,10 +37,13 @@ $csv_array = $csv->fileToArray('test.csv', ['delimiter' => ';']
 
 Versions
 ----
- - 1.0
-     - Simple array to CSV conversion.
+- 1.2
+     - Add associative array from headers support.
  - 1.1
      - Add CSV file to array conversion.
+ - 1.0
+     - Simple array to CSV conversion.
+
 
 License
 ----

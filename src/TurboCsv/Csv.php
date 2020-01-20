@@ -70,8 +70,31 @@ class Csv{
 
         $csv = [];
 
-        while (($line = fgetcsv($file_pointer, 0, $options['delimiter'])) !== FALSE) {
-            $csv[] = $line;
+        if($options['use_headers'] === true){
+            $is_first = true;
+            $headers = [];
+            while (($line = fgetcsv($file_pointer, 0, $options['delimiter'])) !== FALSE) {
+
+                // detect headers
+                if($is_first){
+                    $headers = $line;
+                    $is_first = false;
+                    continue;
+                }
+
+                foreach ($line as $index => $value){
+
+                    $csv[$headers[$index]][] = $value;
+
+                }
+            }
+
+        }else{
+
+            while (($line = fgetcsv($file_pointer, 0, $options['delimiter'])) !== FALSE) {
+                $csv[] = $line;
+            }
+
         }
 
         fclose($file_pointer);
@@ -97,6 +120,7 @@ class Csv{
         }elseif ($use === 'parse'){
 
             $args['delimiter']   = isset($args['delimiter'])?$args['delimiter']:',';
+            $args['use_headers']   = isset($args['use_headers'])?$args['use_headers']:false;
 
         }
 
